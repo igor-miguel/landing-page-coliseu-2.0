@@ -1,100 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comunidade Coliseu AI | Igor Miguel</title>
-    <meta name="description" content="Estratégia de IA para Negócios. Fature R$10k/mês com inteligência e elegância." />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://i.imgur.com/t2yhlEd.png">
-
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Comunidade Coliseu AI | Igor Miguel">
-    <meta property="og:description" content="Estratégia de IA para Negócios. Fature R$10k/mês com inteligência e elegância.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Comunidade Coliseu AI | Igor Miguel">
-    <meta property="twitter:description" content="Estratégia de IA para Negócios. Fature R$10k/mês com inteligência e elegância.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
+    <title>Comunidade Coliseu</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            400: '#D4AF37', // Classic Gold
-                            500: '#C5A059', // Darker Gold
-                            600: '#B48E43',
-                            light: '#F9F1D8',
-                        },
-                        rich: {
-                            black: '#050505',
-                            charcoal: '#0a0a0a',
-                            gray: '#1f1f1f'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    animation: {
-                        'shine': 'shine 5s linear infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'fade-in-down': 'fadeInDown 0.3s ease-out forwards',
-                    },
-                    keyframes: {
-                        shine: {
-                            '0%': { backgroundPosition: '200% center' },
-                            '100%': { backgroundPosition: '-200% center' },
-                        },
-                        fadeInDown: {
-                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #050505;
-            color: #f3f3f3;
-        }
-        
-        /* Custom Utilities */
-        .text-gold-gradient {
-            background: linear-gradient(to right, #D4AF37, #F9F1D8, #D4AF37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: shine 5s linear infinite;
-        }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
-  }
-}
-</script>
-</head>
-  <body>
+  </head>
+  <body class="bg-black">
     <div id="root"></div>
+
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
