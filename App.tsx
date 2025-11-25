@@ -31,13 +31,8 @@ const FAQ_ITEMS = [
 
 /* --- COMPONENTES --- */
 const Button = ({ children, variant = 'primary', className = '', href = '#' }: any) => {
-  // Estilo Base
   const base = "inline-flex items-center justify-center font-bold tracking-wide transition-all duration-300 rounded-sm uppercase cursor-pointer";
-  
-  // Estilo Dourado (Fundo Dourado, Texto Preto)
   const primary = "bg-[#D4AF37] text-black hover:bg-[#C5A028] hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]";
-  
-  // Estilo Outline (Borda Dourada, Texto Dourado)
   const outline = "border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black";
   
   return (
@@ -89,7 +84,6 @@ const App: React.FC = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#050505]/95 backdrop-blur-md py-4 shadow-lg border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <div className="text-white font-bold text-2xl font-serif tracking-tighter">
-            {/* LOGO SIMULADA SE A IMAGEM FALHAR */}
             COMUNIDADE <span className="text-[#D4AF37]">COLISEU</span>
           </div>
           <div className="hidden md:block">
@@ -106,11 +100,9 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* 1. HERO SECTION (Fundo Preto) */}
+      {/* 1. HERO SECTION */}
       <header className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden bg-[#050505]">
-        {/* Glow Dourado no fundo */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#D4AF37] rounded-full blur-[150px] opacity-20 pointer-events-none" />
-        
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-serif font-medium leading-[1.1] text-white mb-8">
             Fature R$10.000/mês com <br />
@@ -131,7 +123,7 @@ const App: React.FC = () => {
         </div>
       </header>
 
-      {/* 2. MARKET CONTEXT (Fundo Branco) */}
+      {/* 2. MARKET CONTEXT */}
       <section className="py-24 bg-white text-black">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-black">
@@ -157,16 +149,54 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. SALES LETTER (Fundo Branco) */}
+      {/* 3. SALES LETTER (COPY COMPLETA) */}
       <section className="py-24 bg-white text-black border-t border-gray-100">
-        <div className="max-w-3xl mx-auto px-6 font-light text-lg md:text-xl leading-relaxed text-gray-800 space-y-8">
-           <h3 className="font-bold text-3xl font-serif text-black text-center">O mercado de Inteligência Artificial explodiu.</h3>
+        <div className="max-w-3xl mx-auto px-6 font-light text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
            
-           <div className="pl-6 border-l-4 border-[#D4AF37] italic text-gray-600 bg-gray-50 p-6 rounded-r-sm">
-              <p>Há pouco tempo, eu era só mais um curioso estudando IA no meu tempo livre. Mas algo aconteceu.</p>
+           <p>Se você está lendo isso agora, provavelmente já percebeu uma coisa:</p>
+           
+           <h3 className="font-bold text-3xl font-serif text-black mt-8">O mercado de Inteligência Artificial explodiu.</h3>
+           
+           <p>Não é tendência. Não é hype.<br />É realidade — e quem entendeu isso cedo já está faturando como nunca.</p>
+           
+           <p>Empresas sendo vendidas por milhões. Agências tradicionais desaparecendo.<br />
+           Profissionais comuns ganhando em poucas semanas o que não ganhavam em meses.</p>
+           
+           <p className="font-medium">E, por mais estranho que pareça, <strong>eu fui uma dessas pessoas.</strong></p>
+
+           <div className="pl-6 border-l-4 border-[#D4AF37] italic text-gray-600 bg-gray-50 p-6 rounded-r-sm my-8">
+              <p>Há pouco tempo, eu era só mais um curioso estudando IA no meu tempo livre.<br />
+              Mas algo aconteceu.</p>
            </div>
 
-           <p>Faturei meus <strong>primeiros R$10.000 em 20 dias.</strong> Só usando IA. Sem equipe. Sem estrutura.</p>
+           <p>Faturei meus <strong>primeiros R$10.000 em 20 dias.</strong><br/>
+           Só usando IA. Sem equipe. Sem estrutura. Sem complicar.</p>
+
+           <p>E quando isso aconteceu, eu percebi:</p>
+           <p className="italic font-medium text-black">“Se eu consegui isso do zero… qualquer pessoa com método consegue também.”</p>
+
+           <p>Foi aí que eu entrei de cabeça no mercado.<br/>
+           Comecei a vender soluções reais para empresas, fechei projetos grandes… e, em poucos meses, <strong>meu faturamento total passou de R$300.000.</strong></p>
+
+           <p>E sim — tudo isso em 4 a 5 meses de projeto.</p>
+
+           <p>Hoje eu atendo empresas gigantes de Belo Horizonte e região, construo agentes de IA complexos, automações de atendimento, sistemas de vendas…<br/>
+           E, no meio desse crescimento todo, ficou claro uma coisa:</p>
+
+           <h3 className="text-3xl font-serif font-bold text-black mt-12 mb-6">Quase ninguém sabe VENDER IA.</h3>
+
+           <ul className="space-y-2 list-disc pl-5 marker:text-[#D4AF37] text-gray-700 mb-8">
+              <li>Quase ninguém sabe precificar.</li>
+              <li>Quase ninguém sabe se posicionar.</li>
+              <li>Quase ninguém sabe conduzir uma reunião.</li>
+              <li>Quase ninguém entende FUNIL.</li>
+              <li>Quase ninguém tem um negócio — tem só um monte de prompts.</li>
+           </ul>
+
+           <p>E é exatamente por isso que a maioria não sai do zero.</p>
+           <p>Templates não fazem você crescer.<br/>Promptzinho de “agente mágico” não paga boletos.<br/>Curso raso não te leva para lugar algum.</p>
+
+           <p>O que muda a sua vida é isso:</p>
 
            <div className="bg-black text-white p-10 rounded-sm shadow-2xl my-12 border border-[#D4AF37]">
               <p className="text-2xl font-serif font-bold text-center mb-6 text-[#D4AF37]">Aprender um NEGÓCIO.</p>
@@ -177,21 +207,61 @@ const App: React.FC = () => {
               </ul>
            </div>
 
-           <div className="text-center pt-8">
-              <Button href="#oferta" className="w-full md:w-auto px-12 py-5 text-lg">CLIQUE AQUI E COMECE AGORA</Button>
+           <p>E é exatamente isso que eu ensino.</p>
+           <p>Eu pego uma pessoa completamente iniciante — literalmente do zero — e mostro:</p>
+
+           <ul className="space-y-4 my-8">
+              <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">01.</span> Como funciona o mercado de IA hoje (de verdade, não o marketing colorido que você vê por aí).</li>
+              <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">02.</span> Como criar serviços que as empresas realmente pagam.</li>
+              <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">03.</span> Como se posicionar para não ser visto como “mais um curioso de IA”.</li>
+              <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">04.</span> Como conduzir reuniões que fecham contrato.</li>
+              <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">05.</span> Como precificar soluções para ganhar dinheiro de verdade.</li>
+              <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">06.</span> Como montar seu funil, seu comercial e sua operação.</li>
+              <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">07.</span> Como entregar projetos para clientes reais.</li>
+           </ul>
+
+           <p className="mt-8 font-medium">E, principalmente:</p>
+           <p className="font-bold text-2xl text-black">Como faturar seus primeiros R$10.000 em IA — do zero — no menor tempo possível.</p>
+
+           <p>Esse é o meu compromisso.<br/>Sem enrolação. Sem teoria vazia. Sem “hack secreto”. Sem depender de sorte.</p>
+           
+           <p>Eu vou te mostrar do começo ao fim como eu construí meu negócio — exatamente o mesmo caminho que me levou a fechar contratos grandes com empresas que você conhece.</p>
+
+           <p className="italic">E, sinceramente?</p>
+           <p>O mercado está tão quente, tão carente e tão cheio de demanda, que quem aprender isso agora se torna inevitável.</p>
+
+           <p>Essa é a sua chance de entrar na frente.<br/>De construir um negócio de verdade.<br/>E de ser pago pelo que você sabe — não pelo que você decora.</p>
+
+           <p className="font-bold text-black mt-6">Se você está cansado de brincar com IA…<br/>E quer finalmente ganhar dinheiro com isso…<br/>Então agora é o momento.</p>
+
+           <p>Eu vou te levar do zero aos R$10.000 com IA — mesmo que:</p>
+           <ul className="list-disc pl-5 marker:text-[#D4AF37] text-gray-700">
+               <li>você não seja técnico,</li>
+               <li>nunca tenha vendido nada,</li>
+               <li>ou ache que “não sabe suficiente”.</li>
+           </ul>
+
+           <p className="mt-6">Eu já fiz isso.<br/>Eu faço isso todo dia.<br/>E agora eu vou te mostrar como fazer também.</p>
+
+           <div className="text-center pt-8 pb-4">
+              <Button href="#oferta" className="w-full md:w-auto px-12 py-5 text-lg shadow-xl">CLIQUE AQUI E COMECE AGORA</Button>
            </div>
+           
+           <p className="text-center text-sm text-gray-500">
+               Porque o mercado não vai esperar.<br/>
+               E a sua vida não muda com mais um template…<br/>
+               mas muda com a decisão certa.
+           </p>
         </div>
       </section>
 
-      {/* 4. PERFIL DO MEMBRO + FOTO COLISEU (Fundo Preto) */}
+      {/* 4. PERFIL DO MEMBRO */}
       <section className="py-24 bg-[#050505] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
-           {/* Imagem do Coliseu */}
            <div className="w-full md:w-1/2 h-[600px] relative rounded-sm overflow-hidden opacity-90">
               <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1000" className="w-full h-full object-cover" alt="Coliseu" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
            </div>
-
            <div className="w-full md:w-1/2">
              <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Perfil do Membro</span>
              <h2 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">Esta Comunidade é para você?</h2>
@@ -217,7 +287,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. BENEFÍCIOS (Fundo Preto) */}
+      {/* 5. BENEFÍCIOS */}
       <section className="py-24 bg-[#0a0a0a] text-white border-y border-white/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -241,7 +311,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. CURRICULUM / O QUE VAI APRENDER (Fundo Preto) */}
+      {/* 6. CURRICULUM */}
       <section className="py-24 bg-[#050505] text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -251,9 +321,7 @@ const App: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8">
              {MODULES.map((mod) => (
                <div key={mod.id} className="relative bg-[#0A0A0A] border border-white/10 p-8 rounded-sm overflow-hidden hover:border-[#D4AF37]/30 transition-colors">
-                  {/* Número de Fundo Gigante */}
                   <span className="absolute top-0 right-0 text-[10rem] font-serif font-bold text-[#D4AF37] opacity-5 leading-none -mt-4 -mr-4 pointer-events-none">{mod.id}</span>
-                  
                   <div className="relative z-10">
                      <h3 className="text-[#D4AF37] font-serif italic text-2xl mb-1">{mod.id}.</h3>
                      <h4 className="text-xl font-bold uppercase tracking-wide mb-6 text-white">{mod.title}</h4>
@@ -271,15 +339,13 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. OFERTA (Fundo Preto com Caixa) */}
+      {/* 7. OFERTA */}
       <section id="oferta" className="py-24 bg-[#050505] relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Caprichei MUITO nessa oferta.</h2>
           <p className="text-gray-400 mb-10">Veja tudo o que você recebe ao se tornar Membro Fundador:</p>
           
           <div className="bg-[#0a0a0a] border border-[#D4AF37]/30 p-8 md:p-14 relative shadow-[0_0_60px_rgba(212,175,55,0.1)] max-w-xl mx-auto rounded-sm">
-             
-             {/* Faixa Oferta Limitada */}
              <div className="absolute top-0 right-0 bg-[#D4AF37] text-black text-[10px] font-bold px-8 py-1 uppercase rotate-12 translate-x-8 translate-y-4 shadow-lg">Oferta Limitada</div>
 
              <div className="space-y-4 mb-10 text-left">
@@ -318,14 +384,12 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. BIO MENTOR (Fundo Bege Claro) */}
+      {/* 8. BIO MENTOR */}
       <section className="py-24 bg-[#E5E0D8] text-black">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
            <div className="w-full md:w-5/12">
               <div className="border p-2 border-black/10 bg-white shadow-lg rotate-1">
-                 {/* FOTO DO MENTOR - OBS: Troque o src pela sua foto real hospedada ou use o arquivo local se funcionar */}
                  <img src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" alt="Igor Miguel" className="w-full grayscale hover:grayscale-0 transition-all duration-500" />
-                 {/* Fallback caso a imagem de cima quebre, o layout se mantem */}
               </div>
            </div>
            <div className="w-full md:w-7/12">
@@ -341,7 +405,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 9. FAQ (Fundo Branco) */}
+      {/* 9. FAQ */}
       <section className="py-24 bg-white text-black">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12 text-black">Perguntas Frequentes</h2>
