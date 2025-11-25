@@ -83,8 +83,13 @@ const App: React.FC = () => {
       {/* NAVBAR */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#050505]/95 backdrop-blur-md py-4 shadow-lg border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <div className="text-white font-bold text-2xl font-serif tracking-tighter">
-            COMUNIDADE <span className="text-[#D4AF37]">COLISEU</span>
+          <div className="cursor-pointer hover:opacity-90 transition-opacity">
+            {/* LOGO NO TOPO */}
+            <img 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/Gemini_Generated_Image_4t8r1m4t8r1m4t8r.png?raw=true" 
+              alt="Comunidade Coliseu" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
           <div className="hidden md:block">
             <Button variant="outline" href="#oferta" className="px-6 py-2 text-xs">GARANTIR VAGA</Button>
@@ -100,17 +105,17 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* 1. HERO SECTION (NOVO LAYOUT: ESQUERDA/DIREITA) */}
+      {/* 1. HERO SECTION */}
       <header className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#050505]">
-        {/* Glow Dourado reposicionado para a direita, atrás da foto */}
+        {/* Glow Dourado atrás da foto (direita) */}
         <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-[#D4AF37] rounded-full blur-[180px] opacity-20 pointer-events-none z-0" />
         
-        <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-8">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-8">
           
-          {/* COLUNA DA ESQUERDA: TEXTO */}
+          {/* TEXTO (Esquerda) */}
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight text-white mb-8">
-              {/* O &nbsp; cola o "mês" no "com" */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white mb-8">
+              {/* O &nbsp; garante que "mês" e "com" fiquem grudados */}
               Fature R$10.000/mês&nbsp;com <br />
               <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent pb-2">
                 Inteligência Artificial
@@ -132,9 +137,8 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* COLUNA DA DIREITA: IMAGEM */}
+          {/* IMAGEM HERO (Direita) */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10">
-            {/* Usei a imagem que já estava no projeto como placeholder. Se quiser mudar, altere o src abaixo */}
             <img 
               src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" 
               alt="Igor Miguel" 
@@ -176,14 +180,10 @@ const App: React.FC = () => {
         <div className="max-w-3xl mx-auto px-6 font-light text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
            
            <p>Se você está lendo isso agora, provavelmente já percebeu uma coisa:</p>
-           
            <h3 className="font-bold text-3xl font-serif text-black mt-8">O mercado de Inteligência Artificial explodiu.</h3>
-           
            <p>Não é tendência. Não é hype.<br />É realidade — e quem entendeu isso cedo já está faturando como nunca.</p>
-           
            <p>Empresas sendo vendidas por milhões. Agências tradicionais desaparecendo.<br />
            Profissionais comuns ganhando em poucas semanas o que não ganhavam em meses.</p>
-           
            <p className="font-medium">E, por mais estranho que pareça, <strong>eu fui uma dessas pessoas.</strong></p>
 
            <div className="pl-6 border-l-4 border-[#D4AF37] italic text-gray-600 bg-gray-50 p-6 rounded-r-sm my-8">
@@ -246,14 +246,10 @@ const App: React.FC = () => {
            <p className="font-bold text-2xl text-black">Como faturar seus primeiros R$10.000 em IA — do zero — no menor tempo possível.</p>
 
            <p>Esse é o meu compromisso.<br/>Sem enrolação. Sem teoria vazia. Sem “hack secreto”. Sem depender de sorte.</p>
-           
            <p>Eu vou te mostrar do começo ao fim como eu construí meu negócio — exatamente o mesmo caminho que me levou a fechar contratos grandes com empresas que você conhece.</p>
-
            <p className="italic">E, sinceramente?</p>
            <p>O mercado está tão quente, tão carente e tão cheio de demanda, que quem aprender isso agora se torna inevitável.</p>
-
            <p>Essa é a sua chance de entrar na frente.<br/>De construir um negócio de verdade.<br/>E de ser pago pelo que você sabe — não pelo que você decora.</p>
-
            <p className="font-bold text-black mt-6">Se você está cansado de brincar com IA…<br/>E quer finalmente ganhar dinheiro com isso…<br/>Então agora é o momento.</p>
 
            <p>Eu vou te levar do zero aos R$10.000 com IA — mesmo que:</p>
@@ -281,6 +277,7 @@ const App: React.FC = () => {
       <section className="py-24 bg-[#050505] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
            <div className="w-full md:w-1/2 h-[600px] relative rounded-sm overflow-hidden opacity-90">
+              {/* FOTO GENÉRICA DO COLISEU MANTIDA AQUI PARA AMBIENTAÇÃO */}
               <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1000" className="w-full h-full object-cover" alt="Coliseu" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
            </div>
@@ -411,7 +408,12 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
            <div className="w-full md:w-5/12">
               <div className="border p-2 border-black/10 bg-white shadow-lg rotate-1">
-                 <img src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" alt="Igor Miguel" className="w-full grayscale hover:grayscale-0 transition-all duration-500" />
+                 {/* FOTO DE MENTOR (IMG_3566.JPG) */}
+                 <img 
+                    src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/IMG_3566.JPG?raw=true" 
+                    alt="Igor Miguel" 
+                    className="w-full grayscale hover:grayscale-0 transition-all duration-500" 
+                 />
               </div>
            </div>
            <div className="w-full md:w-7/12">
@@ -437,7 +439,15 @@ const App: React.FC = () => {
 
       {/* FOOTER */}
       <footer className="bg-black py-12 border-t border-white/10 text-center text-gray-600 text-xs uppercase tracking-widest">
-        &copy; {new Date().getFullYear()} Comunidade Coliseu. Todos os direitos reservados.
+        <div className="flex flex-col items-center gap-6">
+            {/* LOGO NO FOOTER */}
+            <img 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/Gemini_Generated_Image_4t8r1m4t8r1m4t8r.png?raw=true" 
+              alt="Comunidade Coliseu" 
+              className="h-16 w-auto object-contain opacity-80"
+            />
+            <p>&copy; {new Date().getFullYear()} Comunidade Coliseu. Todos os direitos reservados.</p>
+        </div>
       </footer>
     </div>
   );
