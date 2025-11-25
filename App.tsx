@@ -84,11 +84,11 @@ const App: React.FC = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#050505]/95 backdrop-blur-md py-4 shadow-lg border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <div className="cursor-pointer hover:opacity-90 transition-opacity">
-            {/* LOGO NO TOPO (Com filtro de contraste e brilho para forçar transparência) */}
+            {/* LOGO NO TOPO (logo_semfundo.png) */}
             <img 
-              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/Gemini_Generated_Image_4t8r1m4t8r1m4t8r.png?raw=true" 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/logo_semfundo.png?raw=true" 
               alt="Comunidade Coliseu" 
-              className="h-12 w-auto object-contain mix-blend-screen brightness-90 contrast-125"
+              className="h-14 w-auto object-contain"
             />
           </div>
           <div className="hidden md:block">
@@ -105,14 +105,14 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* 1. HERO SECTION (LAYOUT LATERAL COM EFEITO DE LUZ DOURADA) */}
+      {/* 1. HERO SECTION */}
       <header className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#050505] flex items-center min-h-[85vh]">
-        {/* Glow Dourado forte atrás da foto para integrar ao fundo, similar à referência */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-[#D4AF37] rounded-full blur-[250px] opacity-30 pointer-events-none z-0" />
+        {/* Glow Dourado forte atrás da foto */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-[#D4AF37] rounded-full blur-[250px] opacity-25 pointer-events-none z-0" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-16">
           
-          {/* COLUNA DA ESQUERDA: TEXTO (Alinhado à esquerda no desktop) */}
+          {/* COLUNA DA ESQUERDA: TEXTO */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white mb-8">
               Fature R$10.000/mês&nbsp;com <br />
@@ -130,13 +130,15 @@ const App: React.FC = () => {
               <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto shadow-lg shadow-[#D4AF37]/20">
                 QUERO GARANTIR MINHA VAGA AGORA
               </Button>
+              
+              {/* PREÇO ATUALIZADO NO HERO */}
               <p className="text-gray-500 text-xs uppercase tracking-widest">
-                De <span className="line-through text-gray-600">R$ 4.997</span> por apenas <strong>12x R$ 103,10</strong>
+                De <span className="line-through text-gray-600">R$ 4.997</span> por apenas <strong>12x R$ 99,70</strong>
               </p>
             </div>
           </div>
 
-          {/* COLUNA DA DIREITA: IMAGEM (image_1.png com efeito de integração) */}
+          {/* COLUNA DA DIREITA: IMAGEM */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10">
             <img 
               src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" 
@@ -383,9 +385,10 @@ const App: React.FC = () => {
              <div className="w-full h-px bg-white/10 mb-8" />
              
              <div className="text-[#D4AF37] text-xs font-bold tracking-widest uppercase mb-2">Valor Promocional</div>
+             {/* PREÇO ATUALIZADO AQUI TAMBÉM */}
              <div className="flex justify-center items-end gap-2 mb-8">
                <span className="text-2xl text-gray-500 mb-2 font-light">12x</span>
-               <span className="text-6xl text-white font-serif font-bold text-[#D4AF37]">103,10</span>
+               <span className="text-6xl text-white font-serif font-bold text-[#D4AF37]">99,70</span>
              </div>
              <p className="text-gray-500 text-sm mb-8">ou R$ 997,00 à vista</p>
 
@@ -439,11 +442,11 @@ const App: React.FC = () => {
       {/* FOOTER */}
       <footer className="bg-black py-12 border-t border-white/10 text-center text-gray-600 text-xs uppercase tracking-widest">
         <div className="flex flex-col items-center gap-6">
-            {/* LOGO NO FOOTER (Com filtro de contraste e brilho para forçar transparência) */}
+            {/* LOGO NO FOOTER (logo_semfundo.png) */}
             <img 
-              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/Gemini_Generated_Image_4t8r1m4t8r1m4t8r.png?raw=true" 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/logo_semfundo.png?raw=true" 
               alt="Comunidade Coliseu" 
-              className="h-16 w-auto object-contain opacity-80 mix-blend-screen brightness-90 contrast-125"
+              className="h-16 w-auto object-contain opacity-80"
             />
             <p>&copy; {new Date().getFullYear()} Comunidade Coliseu. Todos os direitos reservados.</p>
         </div>
