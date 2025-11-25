@@ -84,11 +84,11 @@ const App: React.FC = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#050505]/95 backdrop-blur-md py-4 shadow-lg border-b border-white/10' : 'bg-transparent py-6'}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <div className="cursor-pointer hover:opacity-90 transition-opacity">
-            {/* LOGO NO TOPO (Atualizada para image2.png sem fundo) */}
+            {/* LOGO NO TOPO (Com filtro de contraste e brilho para forçar transparência) */}
             <img 
-              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image2.png?raw=true" 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/Gemini_Generated_Image_4t8r1m4t8r1m4t8r.png?raw=true" 
               alt="Comunidade Coliseu" 
-              className="h-12 w-auto object-contain"
+              className="h-12 w-auto object-contain mix-blend-screen brightness-90 contrast-125"
             />
           </div>
           <div className="hidden md:block">
@@ -439,11 +439,11 @@ const App: React.FC = () => {
       {/* FOOTER */}
       <footer className="bg-black py-12 border-t border-white/10 text-center text-gray-600 text-xs uppercase tracking-widest">
         <div className="flex flex-col items-center gap-6">
-            {/* LOGO NO FOOTER (Atualizada para image2.png sem fundo) */}
+            {/* LOGO NO FOOTER (Com filtro de contraste e brilho para forçar transparência) */}
             <img 
-              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image2.png?raw=true" 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/Gemini_Generated_Image_4t8r1m4t8r1m4t8r.png?raw=true" 
               alt="Comunidade Coliseu" 
-              className="h-16 w-auto object-contain opacity-80"
+              className="h-16 w-auto object-contain opacity-80 mix-blend-screen brightness-90 contrast-125"
             />
             <p>&copy; {new Date().getFullYear()} Comunidade Coliseu. Todos os direitos reservados.</p>
         </div>
