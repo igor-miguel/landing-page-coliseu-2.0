@@ -100,33 +100,47 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* 1. HERO SECTION */}
-      <header className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden bg-[#050505]">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#D4AF37] rounded-full blur-[150px] opacity-20 pointer-events-none" />
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+      {/* 1. HERO SECTION (NOVO LAYOUT: ESQUERDA/DIREITA) */}
+      <header className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#050505]">
+        {/* Glow Dourado reposicionado para a direita, atrás da foto */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-[#D4AF37] rounded-full blur-[180px] opacity-20 pointer-events-none z-0" />
+        
+        <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-8">
           
-          {/* AQUI ESTÁ A CORREÇÃO DO "COM" E O GRADIENTE */}
-          <h1 className="text-5xl md:text-7xl font-serif font-normal leading-tight text-white mb-8">
-            {/* O &nbsp; cola o "mês" no "com" */}
-            Fature R$10.000/mês&nbsp;com <br />
+          {/* COLUNA DA ESQUERDA: TEXTO */}
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight text-white mb-8">
+              {/* O &nbsp; cola o "mês" no "com" */}
+              Fature R$10.000/mês&nbsp;com <br />
+              <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent pb-2">
+                Inteligência Artificial
+              </span> <br />
+              começando do zero.
+            </h1>
             
-            <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent pb-2">
-              Inteligência Artificial
-            </span> <br />
-            
-            começando do zero.
-          </h1>
-          
-          <p className="text-lg md:text-xl text-gray-400 font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-            Você terá acesso a uma estrutura completa dentro da <strong>Comunidade Coliseu</strong>, além do meu acompanhamento próximo para escalar seu faturamento.
-          </p>
-          <div className="flex flex-col items-center gap-6">
-            <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto">
-              QUERO GARANTIR MINHA VAGA AGORA
-            </Button>
-            <p className="text-gray-500 text-xs uppercase tracking-widest">
-              De <span className="line-through text-gray-600">R$ 4.997</span> por apenas <strong>12x R$ 103,10</strong>
+            <p className="text-lg text-gray-400 font-light mb-10 leading-relaxed md:max-w-xl">
+              Você terá acesso a uma estrutura completa dentro da <strong>Comunidade Coliseu</strong>, além do meu acompanhamento próximo para escalar seu faturamento.
             </p>
+            
+            <div className="flex flex-col md:items-start items-center gap-4">
+              <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto shadow-lg shadow-[#D4AF37]/20">
+                QUERO GARANTIR MINHA VAGA AGORA
+              </Button>
+              <p className="text-gray-500 text-xs uppercase tracking-widest">
+                De <span className="line-through text-gray-600">R$ 4.997</span> por apenas <strong>12x R$ 103,10</strong>
+              </p>
+            </div>
+          </div>
+
+          {/* COLUNA DA DIREITA: IMAGEM */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10">
+            {/* Usei a imagem que já estava no projeto como placeholder. Se quiser mudar, altere o src abaixo */}
+            <img 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" 
+              alt="Igor Miguel" 
+              className="w-full max-w-md md:max-w-full h-auto rounded-sm shadow-2xl shadow-[#D4AF37]/30 border border-white/10 rotate-1 hover:rotate-0 transition-all duration-500"
+              style={{maxHeight: '650px', objectFit: 'cover'}}
+            />
           </div>
         </div>
       </header>
@@ -353,4 +367,80 @@ const App: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Caprichei MUITO nessa oferta.</h2>
           <p className="text-gray-400 mb-10">Veja tudo o que você recebe ao se tornar Membro Fundador:</p>
           
-          <div className="bg-[#0a0a0a] border border-[#D4AF37]/30 p-8 md:
+          <div className="bg-[#0a0a0a] border border-[#D4AF37]/30 p-8 md:p-14 relative shadow-[0_0_60px_rgba(212,175,55,0.1)] max-w-xl mx-auto rounded-sm">
+             <div className="absolute top-0 right-0 bg-[#D4AF37] text-black text-[10px] font-bold px-8 py-1 uppercase rotate-12 translate-x-8 translate-y-4 shadow-lg">Oferta Limitada</div>
+
+             <div className="space-y-4 mb-10 text-left">
+               {[
+                 {txt: "Curso Completo de IA e Vendas", val: "(De R$ 2.997)"},
+                 {txt: "Acesso à Comunidade de Networking", val: "(De R$ 997)"},
+                 {txt: "Encontros Semanais Ao Vivo", val: "(Inestimável)"},
+                 {txt: "Templates de Contratos e Scripts", val: "(Bônus)"}
+               ].map((it, i) => (
+                 <div key={i} className="flex items-center gap-3 text-gray-300">
+                   <CheckCircle className="text-green-500 w-5 h-5 shrink-0" /> 
+                   <span>{it.txt} <span className="text-xs text-gray-600 ml-1">{it.val}</span></span>
+                 </div>
+               ))}
+             </div>
+             
+             <div className="w-full h-px bg-white/10 mb-8" />
+             
+             <div className="text-[#D4AF37] text-xs font-bold tracking-widest uppercase mb-2">Valor Promocional</div>
+             <div className="flex justify-center items-end gap-2 mb-8">
+               <span className="text-2xl text-gray-500 mb-2 font-light">12x</span>
+               <span className="text-6xl text-white font-serif font-bold text-[#D4AF37]">103,10</span>
+             </div>
+             <p className="text-gray-500 text-sm mb-8">ou R$ 997,00 à vista</p>
+
+             <Button href="https://pay.herospark.com/comunidade-coliseu-372393" className="w-full py-4 text-lg mb-6">QUERO GARANTIR MINHA VAGA</Button>
+             
+             <div className="flex items-center justify-center gap-3 opacity-80">
+               <ShieldCheck className="text-[#D4AF37]" />
+               <div className="text-left text-xs">
+                 <p className="text-white font-bold">Garantia de 7 Dias</p>
+                 <p className="text-gray-500">Risco zero. Não gostou? Devolvemos tudo.</p>
+               </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. BIO MENTOR */}
+      <section className="py-24 bg-[#E5E0D8] text-black">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
+           <div className="w-full md:w-5/12">
+              <div className="border p-2 border-black/10 bg-white shadow-lg rotate-1">
+                 <img src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" alt="Igor Miguel" className="w-full grayscale hover:grayscale-0 transition-all duration-500" />
+              </div>
+           </div>
+           <div className="w-full md:w-7/12">
+              <span className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-4 block">SEU MENTOR</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-black">Quem é Igor Miguel?</h2>
+              <div className="w-16 h-1 bg-black mb-8"></div>
+              <div className="space-y-6 text-lg font-light text-gray-800 leading-relaxed">
+                 <p>Estrategista Digital e Especialista em Inteligência Artificial. Há anos no mercado digital, eu vim do zero, exatamente como você.</p>
+                 <p>Eu não queria mais ter que contar moeda. Eu queria uma vida digna. E hoje, todos esses sonhos se tornaram realidade graças ao mercado digital e à revolução da IA.</p>
+                 <p className="font-medium text-black">Minha missão agora é simples: te entregar o mapa. Não vendo sorte, vendo processos previsíveis de faturamento.</p>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      {/* 9. FAQ */}
+      <section className="py-24 bg-white text-black">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12 text-black">Perguntas Frequentes</h2>
+          <FaqAccordion items={FAQ_ITEMS} />
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-black py-12 border-t border-white/10 text-center text-gray-600 text-xs uppercase tracking-widest">
+        &copy; {new Date().getFullYear()} Comunidade Coliseu. Todos os direitos reservados.
+      </footer>
+    </div>
+  );
+};
+
+export default App;
