@@ -100,15 +100,20 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION (COM A HEADLINE CORRIGIDA) */}
       <header className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden bg-[#050505]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#D4AF37] rounded-full blur-[150px] opacity-20 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-serif font-medium leading-[1.1] text-white mb-8">
+          
+          {/* AQUI ESTÁ A MÁGICA DO GRADIENTE E ALINHAMENTO */}
+          <h1 className="text-5xl md:text-7xl font-serif font-normal leading-tight text-white mb-8">
             Fature R$10.000/mês com <br />
-            <span className="text-[#D4AF37] italic">Inteligência Artificial</span> <br />
+            <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent">
+              Inteligência Artificial
+            </span> <br />
             começando do zero.
           </h1>
+          
           <p className="text-lg md:text-xl text-gray-400 font-light mb-12 max-w-3xl mx-auto leading-relaxed">
             Você terá acesso a uma estrutura completa dentro da <strong>Comunidade Coliseu</strong>, além do meu acompanhamento próximo para escalar seu faturamento.
           </p>
@@ -149,7 +154,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. SALES LETTER (COPY COMPLETA) */}
+      {/* 3. SALES LETTER */}
       <section className="py-24 bg-white text-black border-t border-gray-100">
         <div className="max-w-3xl mx-auto px-6 font-light text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
            
