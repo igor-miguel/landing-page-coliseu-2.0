@@ -107,12 +107,11 @@ const App: React.FC = () => {
 
       {/* 1. HERO SECTION */}
       <header className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#050505] flex items-center min-h-[85vh]">
-        {/* Glow Dourado forte atrás da foto */}
         <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-[#D4AF37] rounded-full blur-[250px] opacity-25 pointer-events-none z-0" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-16">
           
-          {/* COLUNA DA ESQUERDA: TEXTO */}
+          {/* TEXTO */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white mb-8">
               Fature R$10.000/mês&nbsp;com <br />
@@ -130,15 +129,13 @@ const App: React.FC = () => {
               <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto shadow-lg shadow-[#D4AF37]/20">
                 QUERO GARANTIR MINHA VAGA AGORA
               </Button>
-              
-              {/* PREÇO ATUALIZADO NO HERO */}
               <p className="text-gray-500 text-xs uppercase tracking-widest">
                 De <span className="line-through text-gray-600">R$ 4.997</span> por apenas <strong>12x R$ 99,70</strong>
               </p>
             </div>
           </div>
 
-          {/* COLUNA DA DIREITA: IMAGEM */}
+          {/* IMAGEM */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10">
             <img 
               src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" 
@@ -176,18 +173,19 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. SALES LETTER */}
+      {/* 3. SALES LETTER - FONTE AUMENTADA AQUI */}
       <section className="py-24 bg-white text-black border-t border-gray-100">
-        <div className="max-w-3xl mx-auto px-6 font-light text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
+        {/* Aumentei de text-lg para text-xl (mobile) e text-2xl (desktop) e space-y-8 */}
+        <div className="max-w-4xl mx-auto px-6 font-light text-xl md:text-2xl leading-relaxed text-gray-800 space-y-8">
            
            <p>Se você está lendo isso agora, provavelmente já percebeu uma coisa:</p>
-           <h3 className="font-bold text-3xl font-serif text-black mt-8">O mercado de Inteligência Artificial explodiu.</h3>
+           <h3 className="font-bold text-4xl font-serif text-black mt-8">O mercado de Inteligência Artificial explodiu.</h3>
            <p>Não é tendência. Não é hype.<br />É realidade — e quem entendeu isso cedo já está faturando como nunca.</p>
            <p>Empresas sendo vendidas por milhões. Agências tradicionais desaparecendo.<br />
            Profissionais comuns ganhando em poucas semanas o que não ganhavam em meses.</p>
            <p className="font-medium">E, por mais estranho que pareça, <strong>eu fui uma dessas pessoas.</strong></p>
 
-           <div className="pl-6 border-l-4 border-[#D4AF37] italic text-gray-600 bg-gray-50 p-6 rounded-r-sm my-8">
+           <div className="pl-8 border-l-4 border-[#D4AF37] italic text-gray-600 bg-gray-50 p-8 rounded-r-sm my-8">
               <p>Há pouco tempo, eu era só mais um curioso estudando IA no meu tempo livre.<br />
               Mas algo aconteceu.</p>
            </div>
@@ -206,9 +204,9 @@ const App: React.FC = () => {
            <p>Hoje eu atendo empresas gigantes de Belo Horizonte e região, construo agentes de IA complexos, automações de atendimento, sistemas de vendas…<br/>
            E, no meio desse crescimento todo, ficou claro uma coisa:</p>
 
-           <h3 className="text-3xl font-serif font-bold text-black mt-12 mb-6">Quase ninguém sabe VENDER IA.</h3>
+           <h3 className="text-4xl font-serif font-bold text-black mt-12 mb-6">Quase ninguém sabe VENDER IA.</h3>
 
-           <ul className="space-y-2 list-disc pl-5 marker:text-[#D4AF37] text-gray-700 mb-8">
+           <ul className="space-y-3 list-disc pl-6 marker:text-[#D4AF37] text-gray-700 mb-8">
               <li>Quase ninguém sabe precificar.</li>
               <li>Quase ninguém sabe se posicionar.</li>
               <li>Quase ninguém sabe conduzir uma reunião.</li>
@@ -221,9 +219,9 @@ const App: React.FC = () => {
 
            <p>O que muda a sua vida é isso:</p>
 
-           <div className="bg-black text-white p-10 rounded-sm shadow-2xl my-12 border border-[#D4AF37]">
-              <p className="text-2xl font-serif font-bold text-center mb-6 text-[#D4AF37]">Aprender um NEGÓCIO.</p>
-              <ul className="space-y-4 text-gray-300 text-base">
+           <div className="bg-black text-white p-12 rounded-sm shadow-2xl my-12 border border-[#D4AF37]">
+              <p className="text-3xl font-serif font-bold text-center mb-8 text-[#D4AF37]">Aprender um NEGÓCIO.</p>
+              <ul className="space-y-5 text-gray-300 text-lg">
                   <li className="flex gap-3"><Check className="text-[#D4AF37] shrink-0" /> Aprender a vender.</li>
                   <li className="flex gap-3"><Check className="text-[#D4AF37] shrink-0" /> Aprender a fechar contrato.</li>
                   <li className="flex gap-3"><Check className="text-[#D4AF37] shrink-0" /> Aprender IA de verdade — com aplicação real.</li>
@@ -233,7 +231,7 @@ const App: React.FC = () => {
            <p>E é exatamente isso que eu ensino.</p>
            <p>Eu pego uma pessoa completamente iniciante — literalmente do zero — e mostro:</p>
 
-           <ul className="space-y-4 my-8">
+           <ul className="space-y-5 my-8">
               <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">01.</span> Como funciona o mercado de IA hoje (de verdade, não o marketing colorido que você vê por aí).</li>
               <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">02.</span> Como criar serviços que as empresas realmente pagam.</li>
               <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">03.</span> Como se posicionar para não ser visto como “mais um curioso de IA”.</li>
@@ -243,8 +241,8 @@ const App: React.FC = () => {
               <li className="flex gap-3 items-start"><span className="text-[#D4AF37] font-bold">07.</span> Como entregar projetos para clientes reais.</li>
            </ul>
 
-           <p className="mt-8 font-medium">E, principalmente:</p>
-           <p className="font-bold text-2xl text-black">Como faturar seus primeiros R$10.000 em IA — do zero — no menor tempo possível.</p>
+           <p className="mt-12 font-medium">E, principalmente:</p>
+           <p className="font-bold text-3xl text-black">Como faturar seus primeiros R$10.000 em IA — do zero — no menor tempo possível.</p>
 
            <p>Esse é o meu compromisso.<br/>Sem enrolação. Sem teoria vazia. Sem “hack secreto”. Sem depender de sorte.</p>
            <p>Eu vou te mostrar do começo ao fim como eu construí meu negócio — exatamente o mesmo caminho que me levou a fechar contratos grandes com empresas que você conhece.</p>
@@ -254,7 +252,7 @@ const App: React.FC = () => {
            <p className="font-bold text-black mt-6">Se você está cansado de brincar com IA…<br/>E quer finalmente ganhar dinheiro com isso…<br/>Então agora é o momento.</p>
 
            <p>Eu vou te levar do zero aos R$10.000 com IA — mesmo que:</p>
-           <ul className="list-disc pl-5 marker:text-[#D4AF37] text-gray-700">
+           <ul className="list-disc pl-6 marker:text-[#D4AF37] text-gray-700">
                <li>você não seja técnico,</li>
                <li>nunca tenha vendido nada,</li>
                <li>ou ache que “não sabe suficiente”.</li>
@@ -262,11 +260,11 @@ const App: React.FC = () => {
 
            <p className="mt-6">Eu já fiz isso.<br/>Eu faço isso todo dia.<br/>E agora eu vou te mostrar como fazer também.</p>
 
-           <div className="text-center pt-8 pb-4">
-              <Button href="#oferta" className="w-full md:w-auto px-12 py-5 text-lg shadow-xl">CLIQUE AQUI E COMECE AGORA</Button>
+           <div className="text-center pt-10 pb-6">
+              <Button href="#oferta" className="w-full md:w-auto px-14 py-6 text-xl shadow-xl">CLIQUE AQUI E COMECE AGORA</Button>
            </div>
            
-           <p className="text-center text-sm text-gray-500">
+           <p className="text-center text-base text-gray-500">
                Porque o mercado não vai esperar.<br/>
                E a sua vida não muda com mais um template…<br/>
                mas muda com a decisão certa.
@@ -278,7 +276,6 @@ const App: React.FC = () => {
       <section className="py-24 bg-[#050505] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
            <div className="w-full md:w-1/2 h-[600px] relative rounded-sm overflow-hidden opacity-90">
-              {/* FOTO GENÉRICA DO COLISEU MANTIDA AQUI PARA AMBIENTAÇÃO */}
               <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1000" className="w-full h-full object-cover" alt="Coliseu" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
            </div>
@@ -385,7 +382,6 @@ const App: React.FC = () => {
              <div className="w-full h-px bg-white/10 mb-8" />
              
              <div className="text-[#D4AF37] text-xs font-bold tracking-widest uppercase mb-2">Valor Promocional</div>
-             {/* PREÇO ATUALIZADO AQUI TAMBÉM */}
              <div className="flex justify-center items-end gap-2 mb-8">
                <span className="text-2xl text-gray-500 mb-2 font-light">12x</span>
                <span className="text-6xl text-white font-serif font-bold text-[#D4AF37]">99,70</span>
@@ -410,7 +406,6 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
            <div className="w-full md:w-5/12">
               <div className="border p-2 border-black/10 bg-white shadow-lg rotate-1">
-                 {/* FOTO DE MENTOR (USANDO A IMG_3566.JPG AQUI) */}
                  <img 
                     src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/IMG_3566.JPG?raw=true" 
                     alt="Igor Miguel" 
@@ -442,7 +437,6 @@ const App: React.FC = () => {
       {/* FOOTER */}
       <footer className="bg-black py-12 border-t border-white/10 text-center text-gray-600 text-xs uppercase tracking-widest">
         <div className="flex flex-col items-center gap-6">
-            {/* LOGO NO FOOTER (logo_semfundo.png) */}
             <img 
               src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/logo_semfundo.png?raw=true" 
               alt="Comunidade Coliseu" 
