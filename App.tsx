@@ -105,43 +105,46 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* 1. HERO SECTION (FUNDO TOTAL COM FOTO DE BRAÇOS CRUZADOS) */}
-      <header className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden min-h-[90vh] flex items-center bg-[#050505]">
+      {/* 1. HERO SECTION (LAYOUT LATERAL COM IMAGE_1.PNG) */}
+      <header className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#050505]">
+        {/* Glow Dourado forte atrás da foto para integrar ao fundo */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[700px] h-[700px] bg-[#D4AF37] rounded-full blur-[200px] opacity-25 pointer-events-none z-0" />
         
-        {/* IMAGEM DE FUNDO */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/IMG_3566.JPG?raw=true"
-            alt="Igor Miguel"
-            className="w-full h-full object-cover object-center"
-          />
-          {/* OVERLAY ESCURO PARA LEITURA */}
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-8">
           
-          {/* TEXTO CENTRALIZADO */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight text-white mb-8">
-            {/* O &nbsp; garante que "mês" e "com" fiquem grudados */}
-            Fature R$10.000/mês&nbsp;com <br />
-            <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent pb-2">
-              Inteligência Artificial
-            </span> <br />
-            começando do zero.
-          </h1>
-          
-          <p className="text-lg text-gray-300 font-light mb-10 leading-relaxed mx-auto md:max-w-2xl">
-            Você terá acesso a uma estrutura completa dentro da <strong>Comunidade Coliseu</strong>, além do meu acompanhamento próximo para escalar seu faturamento.
-          </p>
-          
-          <div className="flex flex-col items-center gap-4">
-            <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto shadow-lg shadow-[#D4AF37]/20">
-              QUERO GARANTIR MINHA VAGA AGORA
-            </Button>
-            <p className="text-gray-400 text-xs uppercase tracking-widest">
-              De <span className="line-through text-gray-500">R$ 4.997</span> por apenas <strong>12x R$ 103,10</strong>
+          {/* COLUNA DA ESQUERDA: TEXTO */}
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white mb-8">
+              Fature R$10.000/mês&nbsp;com <br />
+              <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent pb-2">
+                Inteligência Artificial
+              </span> <br />
+              começando do zero.
+            </h1>
+            
+            <p className="text-lg text-gray-400 font-light mb-10 leading-relaxed md:max-w-xl">
+              Você terá acesso a uma estrutura completa dentro da <strong>Comunidade Coliseu</strong>, além do meu acompanhamento próximo para escalar seu faturamento.
             </p>
+            
+            <div className="flex flex-col md:items-start items-center gap-4">
+              <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto shadow-lg shadow-[#D4AF37]/20">
+                QUERO GARANTIR MINHA VAGA AGORA
+              </Button>
+              <p className="text-gray-500 text-xs uppercase tracking-widest">
+                De <span className="line-through text-gray-600">R$ 4.997</span> por apenas <strong>12x R$ 103,10</strong>
+              </p>
+            </div>
+          </div>
+
+          {/* COLUNA DA DIREITA: IMAGEM 1 */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10">
+            {/* USANDO A FOTO image_1.png */}
+            <img 
+              src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" 
+              alt="Igor Miguel" 
+              className="w-full max-w-md md:max-w-full h-auto rounded-sm shadow-2xl shadow-[#D4AF37]/30 border border-white/10"
+              style={{maxHeight: '650px', objectFit: 'cover'}}
+            />
           </div>
         </div>
       </header>
@@ -405,7 +408,7 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
            <div className="w-full md:w-5/12">
               <div className="border p-2 border-black/10 bg-white shadow-lg rotate-1">
-                 {/* FOTO DE MENTOR (MANTIDA A MESMA PARA A BIO) */}
+                 {/* FOTO DE MENTOR (USANDO A IMG_3566.JPG AQUI) */}
                  <img 
                     src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/IMG_3566.JPG?raw=true" 
                     alt="Igor Miguel" 
