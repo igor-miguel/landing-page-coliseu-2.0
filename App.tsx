@@ -100,22 +100,21 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* 1. HERO SECTION (AJUSTADO PARA 2 LINHAS) */}
+      {/* 1. HERO SECTION (NOVO LAYOUT: ESQUERDA/DIREITA) */}
       <header className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#050505]">
-        {/* Glow Dourado reposicionado para a direita */}
+        {/* Glow Dourado reposicionado para a direita, atrás da foto */}
         <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-[#D4AF37] rounded-full blur-[180px] opacity-20 pointer-events-none z-0" />
         
-        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-8">
+        <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-8">
           
           {/* COLUNA DA ESQUERDA: TEXTO */}
           <div className="w-full md:w-1/2 text-center md:text-left">
-            {/* Diminui um pouco a fonte (de 7xl para 6xl) para caber a frase longa na mesma linha */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white mb-8">
-              Fature R$10.000/mês com{' '}
-              <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight text-white mb-8">
+              {/* O &nbsp; cola o "mês" no "com" */}
+              Fature R$10.000/mês&nbsp;com <br />
+              <span className="italic font-medium bg-gradient-to-r from-[#B08D1F] via-[#F2D06B] to-[#B08D1F] bg-clip-text text-transparent pb-2">
                 Inteligência Artificial
-              </span>
-              <br />
+              </span> <br />
               começando do zero.
             </h1>
             
@@ -135,19 +134,12 @@ const App: React.FC = () => {
 
           {/* COLUNA DA DIREITA: IMAGEM */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10">
-            {/* ATENÇÃO: Se esta imagem não carregar, é porque o arquivo 'image_1.png'
-               não está na raiz do seu GitHub ou o nome está diferente.
-               Tentei colocar o link direto do GitHub para forçar o carregamento.
-            */}
+            {/* Usei a imagem que já estava no projeto como placeholder. Se quiser mudar, altere o src abaixo */}
             <img 
               src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" 
               alt="Igor Miguel" 
               className="w-full max-w-md md:max-w-full h-auto rounded-sm shadow-2xl shadow-[#D4AF37]/30 border border-white/10 rotate-1 hover:rotate-0 transition-all duration-500"
               style={{maxHeight: '650px', objectFit: 'cover'}}
-              onError={(e) => {
-                // Fallback para uma imagem genérica se a sua falhar
-                e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop";
-              }}
             />
           </div>
         </div>
@@ -419,7 +411,6 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
            <div className="w-full md:w-5/12">
               <div className="border p-2 border-black/10 bg-white shadow-lg rotate-1">
-                 {/* AQUI VAI SUA FOTO - ATENÇÃO AO NOME */}
                  <img src="https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/image_1.png?raw=true" alt="Igor Miguel" className="w-full grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
            </div>
