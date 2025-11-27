@@ -111,8 +111,8 @@ const App: React.FC = () => {
         style={{
           // A imagem cobre todo o fundo, mas focamos à direita (right) onde você deve estar
           backgroundImage: "url('https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/gemini%203%20(1).png?raw=true')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center right', // Garante que a foto fique alinhada à direita
+          backgroundSize: 'cover', // Revertido para 'cover' para preencher 100%
+          backgroundPosition: '75% 20%', // Ajuste fino para enquadrar melhor e mostrar o ombro
           backgroundRepeat: 'no-repeat'
         }}
       >
