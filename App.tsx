@@ -130,7 +130,7 @@ const App: React.FC = () => {
           
           {/* TEXTO - Limitado a 55% da largura para não cobrir o rosto na direita */}
           <div className="w-full md:w-[55%] text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white mb-8 drop-shadow-2xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight text-white mb-8 drop-shadow-2xl">
               Fature R$10.000/mês&nbsp;com <br />
               <span className="italic font-medium text-[#D4AF37] pb-2 relative inline-block">
                 Inteligência Artificial
@@ -140,7 +140,7 @@ const App: React.FC = () => {
               começando do zero.
             </h1>
             
-            <p className="text-lg text-gray-300 font-light mb-10 leading-relaxed md:max-w-xl drop-shadow-lg">
+            <p className="text-lg md:text-xl text-gray-300 font-light mb-10 leading-relaxed md:max-w-xl drop-shadow-lg">
               Você terá acesso a uma estrutura completa dentro da <strong>Comunidade Coliseu</strong>, além do meu acompanhamento próximo para escalar seu faturamento.
             </p>
             
