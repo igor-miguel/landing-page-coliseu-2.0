@@ -126,10 +126,8 @@ const App: React.FC = () => {
           // A imagem cobre todo o fundo, mas focamos à direita (right) onde você deve estar
           backgroundImage: "url('https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/igor.png?raw=true')",
           backgroundSize: 'cover', // Mantido como cover para preencher 100%
-          // Ajuste de posição para mobile e desktop:
-          // Mobile (padrão): '85% center' arrasta a imagem para focar no Coliseu e evitar corte do rosto.
-          // Desktop (md:): '70% 20%' mantém o ajuste anterior para telas maiores.
-          backgroundPosition: '85% center', // Padrão para mobile
+          backgroundPosition: '85% center', // Padrão para mobile (foca no Coliseu/esquerda)
+          backgroundRepeat: 'no-repeat'
         }}
       >
         {/* Estilo inline condicional para sobrescrever a posição no desktop */}
@@ -140,7 +138,7 @@ const App: React.FC = () => {
             }
           }
         `}</style>
-        
+
         {/* GRADIENTE DE FUSÃO: Preto sólido na esquerda -> Transparente na direita */}
         {/* Isso cria o efeito de "lado a lado" perfeito, onde o texto fica no preto e você na foto */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-transparent z-0"></div>
@@ -331,9 +329,6 @@ const App: React.FC = () => {
                  <p className="text-gray-600 font-light leading-relaxed text-sm">
                    Antes da comunidade, ele estava travado, sem clareza e focando apenas no técnico. Executou o plano, fez captação inteligente para seu nicho e o efeito dominó começou. Tendo um resultado incrível e escalando cada dia mais.
                  </p>
-                 <p className="italic text-gray-800 font-medium text-sm border-l-2 border-[#D4AF37] pl-3">
-                   “Ele achava que ia demorar meses para ter resultado.”
-                 </p>
                </div>
              </div>
 
@@ -351,10 +346,10 @@ const App: React.FC = () => {
                </div>
                <div className="space-y-4 px-2">
                  <h3 className="font-serif font-bold text-xl text-black leading-tight">
-                   Mas quando ele colocou a oferta certa na frente das pessoas certas, aconteceu.
+                   “Ele achava que ia demorar meses para ter resultado.”
                  </h3>
                  <p className="text-gray-600 font-light leading-relaxed text-sm">
-                   Cinco dias depois: <strong>R$12.000 fechados.</strong> E sem nunca ter vendido nada com IA antes.
+                   Mas quando ele colocou a oferta certa na frente das pessoas certas, aconteceu. Cinco dias depois: <strong>R$12.000 fechados.</strong> E sem nunca ter vendido nada com IA antes.
                  </p>
                </div>
              </div>
