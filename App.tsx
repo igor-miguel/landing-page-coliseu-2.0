@@ -110,9 +110,9 @@ const App: React.FC = () => {
         className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-black"
         style={{
           // A imagem cobre todo o fundo, mas focamos à direita (right) onde você deve estar
-          backgroundImage: "url('https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/gemini%203%20(1).png?raw=true')",
+          backgroundImage: "url('https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/igor.png?raw=true')",
           backgroundSize: 'cover', // Revertido para 'cover' para preencher 100%
-          backgroundPosition: '75% 20%', // Ajuste fino para enquadrar melhor e mostrar o ombro
+          backgroundPosition: '70% 20%', // Ajuste fino para enquadrar melhor e mostrar o ombro sem corte reto
           backgroundRepeat: 'no-repeat'
         }}
       >
