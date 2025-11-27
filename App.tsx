@@ -72,8 +72,22 @@ const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Scroll listener
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
+
+    // Favicon update
+    const faviconUrl = "https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/logo_semfundo.png?raw=true";
+    const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
+    if (!link) {
+      const newLink = document.createElement('link');
+      newLink.rel = 'icon';
+      newLink.href = faviconUrl;
+      document.head.appendChild(newLink);
+    } else {
+      link.href = faviconUrl;
+    }
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -111,7 +125,7 @@ const App: React.FC = () => {
         style={{
           // A imagem cobre todo o fundo, mas focamos à direita (right) onde você deve estar
           backgroundImage: "url('https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/igor.png?raw=true')",
-          backgroundSize: 'cover', // Revertido para 'cover' para preencher 100%
+          backgroundSize: 'cover', // Mantido como cover para preencher 100%
           backgroundPosition: '70% 20%', // Ajuste fino para enquadrar melhor e mostrar o ombro sem corte reto
           backgroundRepeat: 'no-repeat'
         }}
@@ -148,9 +162,7 @@ const App: React.FC = () => {
               <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto shadow-xl shadow-[#D4AF37]/10 hover:shadow-[#D4AF37]/30">
                 QUERO GARANTIR MINHA VAGA AGORA
               </Button>
-              <p className="text-gray-400 text-xs uppercase tracking-widest drop-shadow-md bg-black/30 px-2 py-1 rounded">
-                De <span className="line-through text-gray-600">R$ 4.997</span> por apenas <strong>12x R$ 99,70</strong>
-              </p>
+              {/* Preço removido conforme solicitado */}
             </div>
           </div>
         </div>
@@ -393,11 +405,11 @@ const App: React.FC = () => {
              <div className="text-[#D4AF37] text-xs font-bold tracking-widest uppercase mb-2">Valor Promocional</div>
              <div className="flex justify-center items-end gap-2 mb-8">
                <span className="text-2xl text-gray-500 mb-2 font-light">12x</span>
-               <span className="text-6xl text-white font-serif font-bold text-[#D4AF37]">99,70</span>
+               <span className="text-6xl text-white font-serif font-bold text-[#D4AF37]">102,51</span>
              </div>
              <p className="text-gray-500 text-sm mb-8">ou R$ 997,00 à vista</p>
 
-             <Button href="https://pay.herospark.com/comunidade-coliseu-372393" className="w-full py-4 text-lg mb-6">QUERO GARANTIR MINHA VAGA</Button>
+             <Button href="https://payfast.greenn.com.br/147301" className="w-full py-4 text-lg mb-6">QUERO GARANTIR MINHA VAGA</Button>
              
              <div className="flex items-center justify-center gap-3 opacity-80">
                <ShieldCheck className="text-[#D4AF37]" />
