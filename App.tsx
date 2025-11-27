@@ -162,7 +162,6 @@ const App: React.FC = () => {
               <Button href="#oferta" className="px-10 py-5 text-base md:text-lg w-full md:w-auto shadow-xl shadow-[#D4AF37]/10 hover:shadow-[#D4AF37]/30">
                 QUERO GARANTIR MINHA VAGA AGORA
               </Button>
-              {/* Preço removido conforme solicitado */}
             </div>
           </div>
         </div>
@@ -194,9 +193,8 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. SALES LETTER - FONTE AUMENTADA AQUI */}
+      {/* 3. SALES LETTER */}
       <section className="py-24 bg-white text-black border-t border-gray-100">
-        {/* Aumentei de text-lg para text-xl (mobile) e text-2xl (desktop) e space-y-8 */}
         <div className="max-w-4xl mx-auto px-6 font-light text-xl md:text-2xl leading-relaxed text-gray-800 space-y-8">
             
            <p>Se você está lendo isso agora, provavelmente já percebeu uma coisa:</p>
@@ -293,7 +291,68 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. PERFIL DO MEMBRO */}
+      {/* 4. PROVAS SOCIAIS (MOVIDO PARA CÁ) */}
+      <section className="py-24 bg-white text-black border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-center mb-16 text-black">
+            Olha os resultados dos membros
+          </h2>
+          {/* Layout responsivo: 1 coluna mobile. Desktop: 2 vídeos lado a lado ocupando mais espaço.
+              Aumentei a largura de 32% para 45% (md:w-[45%]) para ficarem maiores. */}
+          <div className="flex flex-col md:flex-row justify-center gap-12 items-start">
+             
+             {/* VÍDEO 1 */}
+             <div className="w-full md:w-[45%] flex flex-col gap-6">
+               <div className="w-full aspect-video rounded-sm overflow-hidden shadow-2xl hover:shadow-[#D4AF37]/30 transition-all">
+                 <iframe 
+                   className="w-full h-full" 
+                   src="https://www.youtube.com/embed/Z90_PFBE3Wk" 
+                   title="Depoimento 1"
+                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                   referrerPolicy="strict-origin-when-cross-origin"
+                   allowFullScreen
+                 ></iframe>
+               </div>
+               <div className="space-y-4 px-2">
+                 <h3 className="font-serif font-bold text-xl text-black leading-tight">
+                   “O primeiro contrato mudou tudo.”
+                 </h3>
+                 <p className="text-gray-600 font-light leading-relaxed text-sm">
+                   Antes da comunidade, ele estava travado, sem clareza e focando apenas no técnico. Executou o plano, fez captação inteligente para seu nicho e o efeito dominó começou. Tendo um resultado incrível e escalando cada dia mais.
+                 </p>
+                 <p className="italic text-gray-800 font-medium text-sm border-l-2 border-[#D4AF37] pl-3">
+                   “Ele achava que ia demorar meses para ter resultado.”
+                 </p>
+               </div>
+             </div>
+
+             {/* VÍDEO 2 */}
+             <div className="w-full md:w-[45%] flex flex-col gap-6">
+               <div className="w-full aspect-video rounded-sm overflow-hidden shadow-2xl hover:shadow-[#D4AF37]/30 transition-all">
+                 <iframe 
+                   className="w-full h-full" 
+                   src="https://www.youtube.com/embed/bytgluovg90" 
+                   title="Depoimento 2"
+                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                   referrerPolicy="strict-origin-when-cross-origin"
+                   allowFullScreen
+                 ></iframe>
+               </div>
+               <div className="space-y-4 px-2">
+                 <h3 className="font-serif font-bold text-xl text-black leading-tight">
+                   Mas quando ele colocou a oferta certa na frente das pessoas certas, aconteceu.
+                 </h3>
+                 <p className="text-gray-600 font-light leading-relaxed text-sm">
+                   Cinco dias depois: <strong>R$12.000 fechados.</strong> E sem nunca ter vendido nada com IA antes.
+                 </p>
+               </div>
+             </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PERFIL DO MEMBRO */}
       <section className="py-24 bg-[#050505] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
            <div className="w-full md:w-1/2 h-[600px] relative rounded-sm overflow-hidden opacity-90">
@@ -325,7 +384,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. BENEFÍCIOS */}
+      {/* 6. BENEFÍCIOS */}
       <section className="py-24 bg-[#0a0a0a] text-white border-y border-white/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -349,40 +408,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* NOVO: 5.5 PROVAS SOCIAIS */}
-      <section className="py-24 bg-white text-black border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-center mb-12 text-black">
-            Quem executa...
-          </h2>
-          {/* Layout responsivo: 1 coluna mobile, 3 colunas desktop. 
-              Como são 2 vídeos, centralizamos usando flex e damos a largura de 1/3 para manter a proporção do grid de 3. */}
-          <div className="flex flex-col md:flex-row justify-center gap-8">
-             <div className="w-full md:w-[32%] aspect-video rounded-sm overflow-hidden shadow-2xl hover:shadow-[#D4AF37]/30 transition-all">
-               <iframe 
-                 className="w-full h-full" 
-                 src="https://www.youtube.com/embed/Z90_PFBE3Wk" 
-                 title="Depoimento 1"
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                 referrerPolicy="strict-origin-when-cross-origin"
-                 allowFullScreen
-               ></iframe>
-             </div>
-             <div className="w-full md:w-[32%] aspect-video rounded-sm overflow-hidden shadow-2xl hover:shadow-[#D4AF37]/30 transition-all">
-               <iframe 
-                 className="w-full h-full" 
-                 src="https://www.youtube.com/embed/bytgluovg90" 
-                 title="Depoimento 2"
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                 referrerPolicy="strict-origin-when-cross-origin"
-                 allowFullScreen
-               ></iframe>
-             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. CURRICULUM */}
+      {/* 7. CURRICULUM */}
       <section className="py-24 bg-[#050505] text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -410,7 +436,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. OFERTA */}
+      {/* 8. OFERTA */}
       <section id="oferta" className="py-24 bg-[#050505] relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Caprichei MUITO nessa oferta.</h2>
@@ -455,7 +481,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. BIO MENTOR */}
+      {/* 9. BIO MENTOR */}
       <section className="py-24 bg-[#E5E0D8] text-black">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
            <div className="w-full md:w-5/12">
@@ -480,7 +506,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* 9. FAQ */}
+      {/* 10. FAQ */}
       <section className="py-24 bg-white text-black">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12 text-black">Perguntas Frequentes</h2>
