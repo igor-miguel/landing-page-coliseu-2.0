@@ -126,10 +126,21 @@ const App: React.FC = () => {
           // A imagem cobre todo o fundo, mas focamos à direita (right) onde você deve estar
           backgroundImage: "url('https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/igor.png?raw=true')",
           backgroundSize: 'cover', // Mantido como cover para preencher 100%
-          backgroundPosition: '70% 20%', // Ajuste fino para enquadrar melhor e mostrar o ombro sem corte reto
-          backgroundRepeat: 'no-repeat'
+          // Ajuste de posição para mobile e desktop:
+          // Mobile (padrão): '85% center' arrasta a imagem para focar no Coliseu e evitar corte do rosto.
+          // Desktop (md:): '70% 20%' mantém o ajuste anterior para telas maiores.
+          backgroundPosition: '85% center', // Padrão para mobile
         }}
       >
+        {/* Estilo inline condicional para sobrescrever a posição no desktop */}
+        <style>{`
+          @media (min-width: 768px) {
+            header {
+              background-position: 70% 20% !important;
+            }
+          }
+        `}</style>
+        
         {/* GRADIENTE DE FUSÃO: Preto sólido na esquerda -> Transparente na direita */}
         {/* Isso cria o efeito de "lado a lado" perfeito, onde o texto fica no preto e você na foto */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-transparent z-0"></div>
