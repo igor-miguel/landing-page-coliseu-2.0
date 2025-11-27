@@ -349,6 +349,39 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* NOVO: 5.5 PROVAS SOCIAIS */}
+      <section className="py-24 bg-white text-black border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-center mb-12 text-black">
+            Quem executa...
+          </h2>
+          {/* Layout responsivo: 1 coluna mobile, 3 colunas desktop. 
+              Como são 2 vídeos, centralizamos usando flex e damos a largura de 1/3 para manter a proporção do grid de 3. */}
+          <div className="flex flex-col md:flex-row justify-center gap-8">
+             <div className="w-full md:w-[32%] aspect-video rounded-sm overflow-hidden shadow-2xl hover:shadow-[#D4AF37]/30 transition-all">
+               <iframe 
+                 className="w-full h-full" 
+                 src="https://www.youtube.com/embed/Z90_PFBE3Wk" 
+                 title="Depoimento 1"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 referrerPolicy="strict-origin-when-cross-origin"
+                 allowFullScreen
+               ></iframe>
+             </div>
+             <div className="w-full md:w-[32%] aspect-video rounded-sm overflow-hidden shadow-2xl hover:shadow-[#D4AF37]/30 transition-all">
+               <iframe 
+                 className="w-full h-full" 
+                 src="https://www.youtube.com/embed/bytgluovg90" 
+                 title="Depoimento 2"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 referrerPolicy="strict-origin-when-cross-origin"
+                 allowFullScreen
+               ></iframe>
+             </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. CURRICULUM */}
       <section className="py-24 bg-[#050505] text-white">
         <div className="max-w-6xl mx-auto px-6">
