@@ -22,12 +22,6 @@ const BENEFITS = [
   { id: 4, iconName: 'zap', title: 'Atualizações Constantes', description: 'O mercado de IA muda toda semana. Eu filtro o que importa e trago mastigado.' }
 ];
 
-const SOCIAL_PROOF_IMAGES = [
-  'provasocial1.jpg', 'provasocial2.jpg', 'provasocial3.jpg',
-  'provasocial4.jpg', 'provasocial5.jpg', 'provasocial6.jpg',
-  'provasocial7.jpg', 'provasocial8.jpg', 'provasocial9.jpg'
-].map(img => `https://github.com/igor-miguel/landing-page-coliseu-2.0/blob/main/${img}?raw=true`);
-
 const FAQ_ITEMS = [
   { question: 'Sou iniciante, vai funcionar para mim?', answer: 'Sim. O método foi desenvolvido justamente para quem não sabe nada sobre programação ou IA e deseja começar do zero absoluto.' },
   { question: 'Preciso de computador potente?', answer: 'Não. Como usamos ferramentas em nuvem, qualquer computador com acesso à internet funciona.' },
@@ -314,7 +308,7 @@ const App: React.FC = () => {
           </h2>
           
           {/* VÍDEOS */}
-          <div className="flex flex-col md:flex-row justify-center gap-12 items-start mb-20">
+          <div className="flex flex-col md:flex-row justify-center gap-12 items-start">
              
              {/* VÍDEO 1 */}
              <div className="w-full md:w-[45%] flex flex-col gap-6">
@@ -359,20 +353,6 @@ const App: React.FC = () => {
                  </p>
                </div>
              </div>
-          </div>
-
-          {/* GALERIA DE PRINTS (NOVOS) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {SOCIAL_PROOF_IMAGES.map((src, i) => (
-              <div key={i} className="rounded-sm overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 bg-gray-50 border border-gray-100">
-                <img 
-                  src={src} 
-                  alt={`Resultado aluno ${i+1}`} 
-                  className="w-full h-auto object-cover" 
-                  loading="lazy" 
-                />
-              </div>
-            ))}
           </div>
 
         </div>
